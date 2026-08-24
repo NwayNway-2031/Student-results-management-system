@@ -1,0 +1,914 @@
+ /* =====================================================
+   BASIC SETTINGS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+}
+
+
+/* =====================================================
+   TOTAL PAGE
+   14 cm total
+===================================================== */
+
+.page {
+
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-rows:
+        10.714vh
+        78.572vh
+        10.714vh;
+
+}
+
+
+/* =====================================================
+   TOP NAVIGATION
+   1.5 cm / 14 cm = 10.714vh
+===================================================== */
+
+.top-nav {
+
+    height: 100%;
+
+    background-color: #071f52;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 3%;
+
+}
+
+
+/* =====================================================
+   UNIVERSITY BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.brand img {
+
+    height: 8vh;
+
+    width: auto;
+
+    object-fit: contain;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+    font-family: Georgia,  serif;
+    line-height: 1.05;
+
+}
+
+
+.brand-text strong {
+font-family: Georgia, serif;
+    font-size: clamp(20px,1.7vw,28px);
+font-weight: 300;
+    letter-spacing: 0px;
+white-space: nowrap;
+}
+
+.brand-text span {
+font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(21px,1.65vw,27px);
+font-weight: bold;
+    color: #d9deea;
+
+    margin-top: 4px;
+letter-spacing: 0;
+}
+
+
+/* =====================================================
+   BACK TO HOME
+===================================================== */
+
+.back-home {
+
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #355f9c,
+        #234d88
+    );
+
+    border: 1px solid #7593bd;
+
+    padding: 10px 22px;
+
+    border-radius: 7px;
+
+    font-size: 1vw;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.back-home:hover {
+
+    background-color: #4774ad;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   DEPARTMENT SECTION
+   11 cm / 14 cm = 78.572vh
+===================================================== */
+
+.department-section {
+
+    height: 100%;
+
+    background-color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 3.5vh;
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.department-section h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 3vw, 48px);
+
+    color: #071f52;
+
+    text-align: center;
+
+}
+
+
+.title-line {
+
+    width: 55px;
+
+    height: 3px;
+
+    background-color: #4d6095;
+
+    margin-top: 1.5vh;
+
+}
+
+
+.subtitle {
+
+    color: #555;
+
+    font-size: clamp(12px, 1vw, 17px);
+
+    margin-top: 1.5vh;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   DEPARTMENT GRID - ALL 5 IN ONE ROW
+===================================================== */
+
+.department-grid {
+
+    width: 88%;
+
+    height: 56%;
+
+    margin-top: 3vh;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-rows: 1fr;
+
+    gap: 1.3vw;
+}
+
+
+/* All 5 cards in one row */
+
+.civil,
+.ceit,
+.electronic,
+.electrical,
+.mechanical {
+
+    grid-column: auto;
+}
+/* =====================================================
+   DEPARTMENT CARD
+===================================================== */
+
+.department-card {
+
+    border: 2px solid;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 2vh 1.2vw;
+
+    background-color: white;
+
+    transition: 0.2s;
+
+}
+
+
+.department-card:hover {
+ transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* =====================================================
+   CARD BORDER COLORS
+===================================================== */
+
+.civil {
+
+    border-color: #6e92c8;
+
+}
+
+
+.ceit {
+
+    border-color: #a88bd0;
+
+}
+
+
+.electronic {
+
+    border-color: #7dbb94;
+
+}
+
+
+.electrical {
+
+    border-color: #e4b77d;
+
+}
+
+
+.mechanical {
+
+    border-color: #76aabd;
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.department-icon {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    margin-bottom: 1vh;
+}
+
+.department-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* Icon backgrounds */
+
+.civil .department-icon {
+
+    background-color: #e5edff;
+
+}
+
+
+.ceit .department-icon {
+
+    background-color: #f0e7ff;
+
+}
+
+
+.electronic .department-icon {
+
+    background-color: #e4f7ec;
+
+}
+
+
+.electrical .department-icon {
+
+    background-color: #fff0df;
+
+}
+
+
+.mechanical .department-icon {
+
+    background-color: #e5f4fa;
+
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.department-card h2 {
+
+    text-align: center;
+
+    color: #111827;
+
+    font-size: clamp(13px, 1.15vw, 19px);
+
+    line-height: 1.2;
+
+    min-height: 35px;
+
+}
+
+
+.card-line {
+
+    width: 35px;
+
+    height: 3px;
+
+    margin: 0.8vh 0;
+
+}
+
+
+.civil .card-line {
+
+    background-color: #6e92c8;
+
+}
+
+
+.ceit .card-line {
+
+    background-color: #8d5fc5;
+
+}
+
+
+.electronic .card-line {
+
+    background-color: #66a97e;
+
+}
+
+
+.electrical .card-line {
+
+    background-color: #d79a50;
+
+}
+
+
+.mechanical .card-line {
+
+    background-color: #5599b2;
+
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.department-card p {
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: clamp(10px, 0.85vw, 14px);
+
+    line-height: 1.3;
+
+    margin-bottom: auto;
+
+}
+
+
+/* =====================================================
+   CLICK BUTTON
+===================================================== */
+
+.click-button {
+
+    width: 65%;
+
+    height: 4.2vh;
+
+    min-height: 30px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: clamp(11px, 0.9vw, 16px);
+
+    margin-top: 1vh;
+
+    transition: 0.2s;
+
+}
+
+
+/* Button colors */
+
+.civil .click-button {
+
+    background-color: #1557e8;
+
+}
+
+
+.ceit .click-button {
+
+    background-color: #5b16bd;
+
+}
+
+
+.electronic .click-button {
+
+    background-color: #00a34a;
+
+}
+
+
+.electrical .click-button {
+
+    background-color: #f07800;
+
+}
+
+
+.mechanical .click-button {
+
+    background-color: #1686aa;
+
+}
+
+
+.click-button:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+
+}
+
+
+/* =====================================================
+   BOTTOM NAVIGATION
+   1.5 cm / 14 cm = 10.714vh
+===================================================== */
+
+.bottom-nav {
+
+    height: 100%;
+
+    background-color: #071f52;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    padding: 0 3%;
+
+    color: white;
+
+}
+
+
+.footer-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.footer-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    border: 2px solid #6579b0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+}
+
+
+.footer-item strong {
+
+    display: block;
+
+    font-size: 0.9vw;
+
+}
+
+
+.footer-item span {
+
+    display: block;
+
+    font-size: 0.7vw;
+
+    color: #d5dbea;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================================
+   📱 PHONE RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+
+    .page {
+grid-template-rows:
+            70px
+            1fr
+            70px;
+
+        height: 100vh;
+
+    }
+
+
+    /* TOP NAV */
+
+    .top-nav {
+
+        padding: 0 12px;
+
+    }
+
+
+    .brand {
+
+        gap: 7px;
+
+    }
+
+
+    .brand img {
+
+        height: 48px;
+
+    }
+
+
+    .brand-text strong {
+
+        font-size: 11px;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 8px;
+
+    }
+
+
+    .back-home {
+
+        padding: 7px 10px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+    }
+
+
+    /* DEPARTMENT AREA */
+
+    .department-section {
+
+        padding-top: 18px;
+
+        overflow: hidden;
+
+    }
+
+
+    .department-section h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .title-line {
+
+        width: 45px;
+
+        margin-top: 8px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 10px;
+
+        margin-top: 8px;
+
+    }
+
+
+    /* GRID */
+
+    .department-grid {
+
+        width: 94%;
+
+        height: 70%;
+
+        margin-top: 15px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        grid-template-rows:
+            repeat(3, 1fr);
+
+        gap: 8px;
+
+    }
+
+
+    /* Reset desktop positions */
+
+    .civil,
+    .ceit,
+    .electronic,
+    .electrical,
+    .mechanical {
+
+        grid-column: auto;
+
+    }
+.electronic {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 50%;
+}
+
+    .electrical {
+
+        grid-column: 1 / 2;
+
+    }
+
+
+    .mechanical {
+
+        grid-column: 2 / 3;
+
+    }
+
+
+    .department-card {
+
+        padding: 8px 5px;
+
+        border-radius: 9px;
+
+    }
+
+
+    .department-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 21px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .department-card h2 {
+
+        font-size: 10px;
+
+        min-height: 25px;
+
+    }
+
+
+    .card-line {
+
+        width: 25px;
+
+        height: 2px;
+
+        margin: 4px 0;
+
+    }
+
+
+    .department-card p {
+
+        font-size: 8px;
+
+        line-height: 1.2;
+
+    }
+
+
+    .click-button {
+
+        width: 80%;
+
+        height: 27px;
+
+        min-height: 27px;
+
+        padding: 0 8px;
+
+        font-size: 9px;
+
+        border-radius: 5px;
+
+        margin-top: 5px;
+
+    }
+
+
+    /* BOTTOM NAV */
+
+    .bottom-nav {
+
+        padding: 0 8px;
+
+        justify-content: space-between;
+
+    }
+
+
+    .footer-item {
+
+        gap: 5px;
+
+    }
+
+
+    .footer-icon {
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 13px;
+
+    }
+
+
+    .footer-item strong {
+
+        font-size: 7px;
+
+    }
+
+
+    .footer-item span {
+
+        font-size: 6px;
+
+    }
+
+}

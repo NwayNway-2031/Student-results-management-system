@@ -1,0 +1,680 @@
+/* =====================================================
+   BASIC SETTINGS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* =====================================================
+   1. HEADER
+   1.5 cm / 14 cm = 10.714vh
+===================================================== */
+
+.header {
+    height: 10.714vh;
+
+    background-color: #071f52;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 3%;
+}
+
+
+/* University Logo + Name */
+
+.university-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.university-brand img {
+    height: 8vh;
+
+    width: auto;
+
+    object-fit: contain;
+}
+
+
+.university-name {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.5vw;
+
+    line-height: 1.1;
+
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   2. WHITE LINE
+   0.5 cm / 14 cm = 3.571vh
+===================================================== */
+
+.white-line {
+    height: 3.571vh;
+
+    background-color: white;
+}
+
+
+
+/* =====================================================
+   3. HERO SECTION
+   9 cm / 14 cm = 64.286vh
+===================================================== */
+
+.hero {
+    height: 64.286vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #061f4c;
+}
+
+
+
+/* University Building Image */
+
+/* =====================================================
+   UNIVERSITY BUILDING IMAGE
+   Image ကို Hero တစ်ခုလုံးအပြည့်ထားမယ်
+===================================================== */
+
+.building-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+
+/* =====================================================
+   NATURAL BLUE GRADIENT
+===================================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    background: linear-gradient(
+        90deg,
+
+        /* ဘယ်ဘက် - အပြာရောင်အပြည့် */
+        rgba(3, 27, 67, 0.98) 0%,
+
+        /* စာသားနောက်ဘက် */
+        rgba(3, 27, 67, 0.95) 18%,
+
+        /* နည်းနည်းစပြီး ပျော့ */
+        rgba(3, 27, 67, 0.82) 32%,
+
+        /* Building စမြင်လာ */
+        rgba(3, 27, 67, 0.60) 45%,
+
+        /* အလယ်ပိုင်း */
+        rgba(3, 27, 67, 0.30) 58%,
+
+        /* Building ပိုရှင်း */
+        rgba(3, 27, 67, 0.10) 70%,
+
+        /* ညာဘက် - မူရင်းပုံ */
+        rgba(3, 27, 67, 0) 85%
+    );
+}
+
+
+
+/* Dark Blue Gradient */
+
+/* =====================================================
+   HERO GRADIENT
+   Natural dark blue → transparent transition
+===================================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(4, 27, 65, 1) 0%,
+        rgba(4, 27, 65, 0.98) 20%,
+        rgba(4, 27, 65, 0.88) 32%,
+        rgba(4, 27, 65, 0.68) 43%,
+        rgba(4, 27, 65, 0.40) 53%,
+        rgba(4, 27, 65, 0.16) 64%,
+        rgba(4, 27, 65, 0) 78%
+    );
+
+    z-index: 1;
+}
+
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 52%;
+    height: 100%;
+
+    padding-left: 4.5%;
+    padding-top: 5vh;
+
+    color: white;
+}
+
+
+
+/* Main Heading */
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 4.1vw, 75px);
+
+    line-height: 1.05;
+
+    font-weight: bold;
+}
+
+
+.hero-content h1 span {
+    color: #f5b33d;
+}
+
+
+
+/* Small Lines */
+
+.small-line {
+    width: 6vw;
+
+    height: 2px;
+
+    background-color: #c7cbd2;
+
+    margin: 2.5vh 0;
+}
+
+
+
+/* Dedication Text */
+
+.dedication {
+    font-size: clamp(15px, 1.55vw, 28px);
+
+    color: #d4d7de;
+}
+
+
+
+/* Ready Text */
+
+.ready-text {
+    font-size: clamp(13px, 1.35vw, 24px);
+
+    line-height: 1.5;
+
+    color: #d4d7de;
+}
+
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 2vw;
+
+    margin-top: 2.5vh;
+}
+
+
+
+/* Common Button Settings */
+
+.hero-buttons a {
+    height: 7vh;
+
+    min-height: 45px;
+
+    padding: 0 1.5vw;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1vw;
+
+    text-decoration: none;
+
+    font-size: clamp(14px, 1.35vw, 24px);
+
+    transition: 0.2s;
+}
+
+
+
+/* =====================================================
+   READY BUTTON
+===================================================== */
+
+.ready-button {
+    width: 16vw;
+
+    background-color: #f5b33d;
+ color: #071f52;
+
+    font-weight: bold;
+
+    justify-content: space-between;
+}
+
+
+.ready-button:hover {
+    background-color: #ffc65b;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   UNIVERSITY CONTACT BUTTON
+===================================================== */
+
+.contact-button {
+    width: 21vw;
+
+    border: 2px solid #aeb7c8;
+
+    background-color: transparent;
+
+    color: #dce0e8;
+
+    justify-content: space-between;
+}
+
+
+.contact-button:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+
+/* Button Icons */
+
+.button-icon {
+    font-size: 1.4em;
+}
+
+
+.arrow {
+    font-size: 1.5em;
+}
+
+
+
+/* =====================================================
+   4. DEPARTMENT SECTION
+   2 cm / 14 cm = 14.286vh
+===================================================== */
+
+.departments {
+    height: 14.286vh;
+
+    background-color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1.15fr
+        1fr;
+
+    align-items: center;
+}
+
+
+
+/* Individual Department */
+
+.department {
+    height: 70%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1vw;
+
+    border-right: 1px solid #c8c8c8;
+}
+
+
+.department:last-child {
+    border-right: none;
+}
+
+
+
+/* Department Logos */
+
+.department img {
+    width: 4.8vw;
+    height: 4.8vw;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    max-width: 75px;
+    max-height: 75px;
+
+    object-fit: contain;
+}
+
+
+
+/* Department Text */
+
+.department p {
+    font-size: clamp(11px, 1.2vw, 21px);
+
+    line-height: 1.25;
+
+    color: #111111;
+}
+
+
+
+/* =====================================================
+   5. FOOTER
+   1 cm / 14 cm = 7.143vh
+===================================================== */
+
+.footer {
+    height: 7.143vh;
+
+    background-color: #071f52;
+}
+/* =====================================================
+   📱 PHONE RESPONSIVE DESIGN
+   Laptop design ကို မထိဘဲ Phone မှာပဲ ပြောင်းမယ်
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* ================= HEADER ================= */
+
+    .header {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .university-brand {
+        gap: 8px;
+    }
+
+    .university-brand img {
+        height: 50px;
+        width: auto;
+    }
+
+    .university-name {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .profile-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 20px;
+    }
+
+
+    /* ================= WHITE LINE ================= */
+
+    .white-line {
+        height: 5px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        height: calc(100vh - 70px - 5px - 125px - 45px);
+        min-height: 500px;
+    }
+
+
+    /* Building image */
+
+    .building-image {
+        object-position: center;
+    }
+
+
+    /* Make gradient suitable for phone */
+
+    .hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(4, 27, 65, 0.92) 0%,
+            rgba(4, 27, 65, 0.82) 45%,
+            rgba(4, 27, 65, 0.45) 75%,
+            rgba(4, 27, 65, 0.25) 100%
+        );
+    }
+
+
+    /* ================= HERO CONTENT ================= */
+
+    .hero-content {
+        width: 100%;
+        height: 100%;
+        padding: 35px 20px 20px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Main heading */
+
+    .hero-content h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+
+    /* Lines */
+
+    .small-line {
+        width: 55px;
+        margin: 15px 0;
+    }
+
+
+    /* Dedication */
+
+    .dedication {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+
+    /* Ready text */
+
+    .ready-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* ================= BUTTONS ================= */
+
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 22px;
+    }
+
+
+    .hero-buttons a {
+        width: 85%;
+        max-width: 330px;
+
+        height: 52px;
+        min-height: 52px;
+
+        padding: 0 16px;
+
+        font-size: 15px;
+
+        gap: 10px;
+    }
+
+
+    .ready-button,
+    .contact-button {
+        width: 85%;
+    }
+
+
+    /* ================= DEPARTMENTS ================= */
+
+    .departments {
+        height: 125px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(5, 1fr);
+
+        align-items: center;
+
+        width: 100%;
+    }
+
+
+    .department {
+        height: 70%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding: 3px;
+    }
+
+
+    .department img {
+        width: 42px;
+        height: 42px;
+
+        min-width: 35px;
+        min-height: 35px;
+    }
+
+
+    .department p {
+        font-size: 9px;
+
+        line-height: 1.15;
+
+        text-align: center;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        height: 45px;
+    }
+
+}

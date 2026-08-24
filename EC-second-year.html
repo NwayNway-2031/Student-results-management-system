@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electronic Engineering - First Year</title>
+
+    <link rel="stylesheet" href="result.css">
+</head>
+
+
+<body>
+
+<div class="page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <img
+                src="images/University logo.jpg"
+                class="university-logo"
+                alt="University Logo"
+            >
+
+            <div class="university-name">
+                Technological University Of<br>
+                MEIKTILA
+            </div>
+
+        </div>
+
+
+        <button
+            class="home-btn"
+            onclick="goHome()"
+        >
+            Back To Home
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <section class="left-section">
+
+
+            <!-- DEPARTMENT HEADING -->
+
+            <div class="department-heading">
+
+                <div class="department-logo-box">
+
+                    <img
+                        src="images/EC logo.jpg"
+                        alt="Electronic Engineering"
+                    >
+
+                </div>
+
+
+                <div class="department-title-area">
+
+                    <h1>
+                        Electronic Engineering
+                    </h1>
+
+                    <p>
+                        View and search students results. Click on roll number to see details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH AREA
+            ================================================== -->
+
+            <div class="search-area">
+
+
+                <!-- ROLL SEARCH BOX -->
+
+                <div class="roll-box">
+
+    <label for="rollInput">
+        Go to Roll No
+    </label>
+
+    <div class="roll-controls">
+
+        <input
+            type="text"
+            id="rollInput"
+            name="student-roll-search"
+            placeholder="Enter roll no"
+            maxlength="2"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+        >
+
+        <button
+            type="button"
+            id="goButton"
+        >
+            Go
+        </button>
+
+    </div>
+
+</div>
+
+                <!-- TOTAL STUDENTS -->
+
+                <div class="total-students">
+
+                    <span>
+                        Total Students
+                    </span>
+
+                    <strong>
+                        60
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLE
+            ================================================== -->
+
+            <div
+                class="table-wrapper"
+                id="tableWrapper"
+            >
+
+                <table id="studentTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th class="no-col">
+                                No
+                            </th>
+
+                            <th class="roll-col">
+                                Roll No
+                            </th>
+
+                            <th class="name-col">
+                                Name
+                            </th>
+
+                            <th class="result-col">
+                                Results
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <aside class="right-section">
+
+
+            <button
+                class="words-button"
+                type="button"
+                onclick="showWords()"
+            >
+
+                <span class="heart">
+                    ♡
+                </span>
+
+                <span class="words-text">
+                    Words for You
+                </span>
+
+                <span class="arrow-circle">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <div class="words-list">
+
+    <div class="word-item">
+        <span class="word-number number-1">
+            1
+        </span>
+
+        <span>
+            Engineering English
+        </span>
+    </div>
+
+
+    <div class="word-item">
+        <span class="word-number number-2">
+            2
+        </span>
+
+        <span>
+            Engineering Mathematics
+        </span>
+    </div>
+
+
+    <div class="word-item">
+        <span class="word-number number-3">
+            3
+        </span>
+
+        <span>
+            Data structure
+        </span>
+    </div>
+
+
+    <div class="word-item">
+        <span class="word-number number-4">
+            4
+        </span>
+
+        <span>
+            Data Base Management System
+        </span>
+    </div>
+
+
+    <div class="word-item">
+        <span class="word-number number-5">
+            5
+        </span>
+
+        <span>
+            Java Programming
+        </span>
+    </div>
+
+
+    <div class="word-item">
+        <span class="word-number number-6">
+            6
+        </span>
+
+        <span>
+            Digital Communication
+        </span>
+    </div>
+
+</div>
+        </aside>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-item">
+
+            <div class="footer-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <strong>
+                    Technological University
+                </strong>
+
+                <small>
+                    Excellence in Education, Innovation & Technology
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-item">
+
+            <div class="footer-icon">
+                ▣
+            </div>
+
+            <div>
+
+                <strong>
+                    Academic Year
+                </strong>
+
+                <small>
+                    2026 - 2027
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-item">
+
+            <div class="footer-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    © 2026 Technological University
+                </strong>
+
+                <small>
+                    All Rights Reserved.
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+
+<!-- =========================================================
+     CUSTOM MESSAGE BOX
+
+     IMPORTANT:
+     ဒီ box က ပေါ်နေတဲ့အချိန်မှာပဲ screen ကို ဖုံးမယ်။
+     ပုံမှန်အချိန်မှာ display:none ဖြစ်လို့
+     Roll input ကို လွတ်လွတ်လပ်လပ် ရိုက်လို့ရမယ်။
+========================================================= -->
+
+<div
+    id="customModal"
+    class="custom-modal"
+>
+
+    <div class="modal-box">
+
+        <button
+            type="button"
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon">
+            !
+        </div>
+
+
+        <h2 id="modalTitle">
+            Notice
+        </h2>
+
+
+        <div
+            id="modalMessage"
+            class="modal-message"
+        >
+        </div>
+
+
+        <button
+            type="button"
+            class="modal-ok"
+            id="modalOk"
+        >
+            OK
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* ============================================================
+   STUDENT DATA
+============================================================ */
+
+const students = [
+
+    ["Thida Win", "Pass", "Excellent - 1, 5, 4"],
+    ["Moe Moe Khung", "Pass", "Excellent - 2, 4"],
+    ["Zin Zin Htwe", "Pass", "Excellent - 1, 3, 1"],
+    ["San San Maw", "Fail", "Re exam - 2, 3"],
+    ["Khin Khin Lay", "Pass", "Excellent - 2, 3, 4"],
+    ["Po Po Myet", "Pass", "Excellent - 4, 5"],
+    ["Hnin Hnin Phon", "Pass", "Excellent - 1, 4, 5"],
+    ["Aung Aung", "Pass", "Excellent - 1, 2, 6"],
+    ["Su Su Hlaing", "Pass", "Excellent - 2, 5"],
+    ["Hnin Hnin Phon", "Pass", "Excellent - 4, 5"],
+    ["Mya Mya", "Pass", "Excellent - 1, 3"],
+    ["Ei Ei Win", "Pass", "Excellent - 2, 4"],
+    ["Aye Aye Htun", "Pass", "Excellent - 1, 5"],
+    ["Kyaw Kyaw", "Pass", "Excellent - 3, 4"],
+    ["May Thu", "Pass", "Excellent - 2, 6"],
+    ["Htet Htet", "Pass", "Excellent - 1, 2"],
+    ["Min Min", "Pass", "Excellent - 4, 5"],
+    ["Nandar", "Pass", "Excellent - 1, 3"],
+    ["Thaw Zin", "Pass", "Excellent - 2, 4"],
+    ["Su Mon", "Pass", "Excellent - 1, 5"],
+    ["Aung Min", "Pass", "Excellent - 3, 6"],
+    ["Thin Thin", "Pass", "Excellent - 2, 5"],
+    ["Pyae Pyae", "Pass", "Excellent - 1, 4"],
+    ["Zaw Zaw", "Pass", "Excellent - 2, 3"],
+    ["Hla Hla", "Pass", "Excellent - 1, 5"],
+    ["Myat Noe", "Pass", "Excellent - 3, 4"],
+    ["Aye Chan", "Pass", "Excellent - 2, 6"],
+    ["Nay Lin", "Pass", "Excellent - 1, 3"],
+    ["Ei Phyu", "Pass", "Excellent - 4, 5"],
+    ["Ko Ko", "Pass", "Excellent - 2, 4"],
+    ["Moe Moe", "Pass", "Excellent - 1, 5"],
+    ["Thiri", "Pass", "Excellent - 3, 6"],
+    ["Htet Naing", "Pass", "Excellent - 2, 5"],
+    ["May Zin", "Pass", "Excellent - 1, 4"],
+    ["Kyaw Zin", "Pass", "Excellent - 2, 3"],
+    ["Su Su", "Pass", "Excellent - 1, 5"],
+    ["Aung Thu", "Pass", "Excellent - 3, 4"],
+    ["Mya Thandar", "Pass", "Excellent - 2, 6"],
+    ["Nilar", "Pass", "Excellent - 1, 3"],
+    ["Hnin Ei", "Pass", "Excellent - 4, 5"],
+    ["Zin Mar", "Pass", "Excellent - 2, 4"],
+    ["Thawda", "Pass", "Excellent - 1, 5"],
+    ["Min Thu", "Pass", "Excellent - 3, 6"],
+    ["May May", "Pass", "Excellent - 2, 5"],
+    ["Aye Thandar", "Pass", "Excellent - 1, 4"],
+    ["Kyaw Kyaw Lin", "Pass", "Excellent - 2, 3"],
+    ["Htet Htet Win", "Pass", "Excellent - 1, 5"],
+    ["Su Hnin", "Pass", "Excellent - 3, 4"],
+    ["Moe Thuzar", "Pass", "Excellent - 2, 6"],
+    ["Aung Aung Htet", "Pass", "Excellent - 1, 3"],
+    ["Nwe Nwe", "Pass", "Excellent - 4, 5"],
+    ["Thiri Hlaing", "Pass", "Excellent - 2, 4"],
+    ["Zin Zin", "Pass", "Excellent - 1, 5"],
+    ["Myo Min", "Pass", "Excellent - 3, 6"],
+    ["May Thiri", "Pass", "Excellent - 2, 5"],
+    ["Hlaing Htet", "Pass", "Excellent - 1, 4"],
+    ["Su Myat", "Pass", "Excellent - 2, 3"],
+    ["Aung Naing", "Pass", "Excellent - 1, 5"],
+    ["Mya Win", "Pass", "Excellent - 3, 4"],
+    ["Thant Zin", "Pass", "Excellent - 2, 6"],
+    ["Ei Ei", "Pass", "Excellent - 1, 3"]
+
+];
+
+
+
+/* ============================================================
+   CREATE TABLE
+============================================================ */
+
+const studentBody =
+    document.getElementById("studentBody");
+
+
+students.forEach((student, index) => {
+
+    const rowNumber = index + 1;
+
+    const row =
+        document.createElement("tr");
+
+
+    row.id =
+        "student-" + rowNumber;
+
+
+    row.innerHTML = `
+
+        <td class="center">
+            ${rowNumber}
+        </td>
+
+        <td
+            class="center roll-link"
+            onclick="openStudent(${rowNumber})"
+        >
+            II.EC-${String(rowNumber).padStart(2, "0")}
+        </td>
+
+        <td>
+            ${student[0]}
+        </td>
+
+        <td class="result-cell">
+
+            <span class="${student[1].toLowerCase()}">
+                ${student[1]}
+                (${student[2]})
+            </span>
+
+        </td>
+
+    `;
+
+
+    studentBody.appendChild(row);
+
+});
+
+
+
+/* ============================================================
+   GET ELEMENTS
+============================================================ */
+
+const rollInput =
+    document.getElementById("rollInput");
+
+const goButton =
+    document.getElementById("goButton");
+
+const customModal =
+    document.getElementById("customModal");
+
+const modalTitle =
+    document.getElementById("modalTitle");
+
+const modalMessage =
+    document.getElementById("modalMessage");
+
+const modalOk =
+    document.getElementById("modalOk");
+
+const modalClose =
+    document.getElementById("modalClose");
+
+
+
+/* ============================================================
+   IMPORTANT INPUT FIX
+
+   Only numbers can be entered.
+   No readonly.
+   No disabled.
+   No preventDefault.
+============================================================ */
+
+rollInput.addEventListener("input", function () {
+
+    this.value =
+        this.value.replace(/[^0-9]/g, "");
+
+});
+
+
+
+/* ============================================================
+   CUSTOM MESSAGE
+============================================================ */
+
+function showMessage(title, message) {
+
+    modalTitle.textContent =
+        title;
+
+    modalMessage.textContent =
+        message;
+
+    customModal.classList.add("show");
+
+}
+
+
+
+function closeMessage() {
+
+    customModal.classList.remove("show");
+
+    /* Return keyboard focus to Roll No box */
+
+    setTimeout(() => {
+
+        rollInput.focus();
+
+    }, 50);
+
+}
+
+
+
+/* ============================================================
+   CLOSE MODAL
+============================================================ */
+
+modalOk.addEventListener(
+    "click",
+    closeMessage
+);
+
+
+modalClose.addEventListener(
+    "click",
+    closeMessage
+);
+
+
+
+/* Click outside modal */
+
+customModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === customModal) {
+
+            closeMessage();
+
+        }
+
+    }
+);
+
+
+
+/* ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape" &&
+            customModal.classList.contains("show")
+        ) {
+
+            closeMessage();
+
+        }
+
+    }
+);
+
+
+
+/* ============================================================
+   GO TO ROLL
+============================================================ */
+
+function goToRoll() {
+
+    const value =
+        rollInput.value.trim();
+
+
+    const roll =
+        Number(value);
+
+
+    /* Empty */
+
+    if (value === "") {
+
+        showMessage(
+            "Roll Number Required",
+            "Please enter a roll number from 1 to 60."
+        );
+
+        return;
+
+    }
+
+
+    /* Invalid */
+
+    if (
+        !Number.isInteger(roll) ||
+        roll < 1 ||
+        roll > 60
+    ) {
+
+        showMessage(
+            "Invalid Roll Number",
+            "Please enter a roll number from 1 to 60."
+        );
+
+        return;
+
+    }
+
+
+    const targetRow =
+        document.getElementById(
+            "student-" + roll
+        );
+
+
+    const tableWrapper =
+        document.getElementById(
+            "tableWrapper"
+        );
+
+
+    const tableHeader =
+        document.querySelector(
+            "#studentTable thead"
+        );
+
+
+    if (!targetRow) {
+
+        showMessage(
+            "Student Not Found",
+            "The student record could not be found."
+        );
+
+        return;
+
+    }
+
+
+
+    /* Remove previous highlight */
+
+    document
+        .querySelectorAll(".highlight-row")
+        .forEach(row => {
+
+            row.classList.remove(
+                "highlight-row"
+            );
+
+        });
+
+
+
+    /* Calculate position */
+
+    const headerHeight =
+        tableHeader.offsetHeight;
+
+
+    const targetPosition =
+        targetRow.offsetTop -
+        headerHeight -
+        3;
+
+
+
+    /* Scroll */
+
+    tableWrapper.scrollTo({
+
+        top: targetPosition,
+
+        behavior: "smooth"
+
+    });
+
+
+
+    /* Highlight */
+
+    targetRow.classList.add(
+        "highlight-row"
+    );
+
+
+
+    /* Remove highlight */
+
+    setTimeout(() => {
+
+        targetRow.classList.remove(
+            "highlight-row"
+        );
+
+    }, 2200);
+
+}
+
+
+
+/* ============================================================
+   GO BUTTON
+============================================================ */
+
+goButton.addEventListener(
+    "click",
+    goToRoll
+);
+
+
+
+/* ============================================================
+   ENTER KEY
+============================================================ */
+
+rollInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            goToRoll();
+
+        }
+
+    }
+);
+
+
+
+/* ============================================================
+   CLICK ROLL NUMBER
+============================================================ */
+
+function openStudent(number) {
+
+    const student =
+        students[number - 1];
+
+
+    showMessage(
+
+        "Student Result",
+
+        "Roll No: II.EC-" +
+        String(number).padStart(2, "0") +
+
+        "\n\nName: " +
+        student[0] +
+
+        "\n\nResult: " +
+        student[1] +
+
+        "\n" +
+        student[2]
+
+    );
+
+}
+
+
+
+/* ============================================================
+   BACK TO HOME
+============================================================ */
+
+function goHome() {
+
+    window.location.href =
+        "index.html";
+
+}
+
+
+
+/* ============================================================
+   WORDS FOR YOU
+============================================================ */
+
+function showWords() {
+
+    showMessage(
+        "Words for You",
+        "Believe in yourself and keep moving forward!"
+    );
+
+}
+
+
+
+/* ============================================================
+   WORD ITEMS
+============================================================ */
+
+function showWord(number) {
+
+    const words = {
+
+        1: "Engineering English",
+        2: "Engineering Mathematics",
+        3: "Data structure",
+        4: "Data Base Management System",
+        5: "Java Programming",
+        6: "Digital Communication"
+
+    };
+
+
+    showMessage(
+        words[number],
+        "Keep learning and do your best!"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
